@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct student {
+    char name[20];
+    int roll;
+};
+int main() {
+    struct student *s;
+    s = (struct student*)malloc(sizeof(struct student));
+    scanf("%s %d", s->name, &s->roll);
+    printf("%s %d", s->name, s->roll);
+    free(s);
+    return 0;
+}
